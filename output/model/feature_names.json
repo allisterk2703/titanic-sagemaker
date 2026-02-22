@@ -1,0 +1,10 @@
+[
+  "parch",
+  "pclass",
+  "sibsp",
+  "age",
+  "embarked",
+  "familysize",
+  "fare",
+  "sex"
+]

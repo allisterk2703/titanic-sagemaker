@@ -1,0 +1,10 @@
+{
+  "parch": 0.0,
+  "pclass": 3.0,
+  "sibsp": 0.0,
+  "age": 28.0,
+  "embarked": 0.0,
+  "familysize": 1.0,
+  "fare": 15.9,
+  "sex": 0.0
+}

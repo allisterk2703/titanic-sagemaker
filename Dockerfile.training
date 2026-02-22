@@ -1,0 +1,21 @@
+# Dockerfile.training
+
+FROM python:3.11-slim
+
+WORKDIR /opt/ml/code
+
+# Install dependencies
+COPY requirements-docker.txt .
+RUN pip --no-cache-dir install --upgrade pip setuptools wheel && pip --no-cache-dir install -r requirements-docker.txt
+
+ENV PYTHONUNBUFFERED=TRUE
+ENV PYTHONDONTWRITEBYTECODE=TRUE
+ENV PATH="/opt/ml/code:${PATH}"
+
+COPY src/ src/
+COPY train.py /opt/ml/code/train
+
+# Create SageMaker standard directories (may be over-mounted at runtime)
+RUN mkdir -p /opt/ml/input/data /opt/ml/model /opt/ml/output
+
+RUN chmod +x /opt/ml/code/train
