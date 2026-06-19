@@ -3,3 +3,4 @@ scikit-learn
 fastapi
 pydantic
 uvicorn
+mlflow
