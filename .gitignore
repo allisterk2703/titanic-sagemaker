@@ -6,3 +6,6 @@ __pycache__/
 logs/
 mlflow.db
 mlruns/
+output/
+models/
+predictions/
