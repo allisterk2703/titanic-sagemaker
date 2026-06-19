@@ -10,6 +10,7 @@ RUN pip --no-cache-dir install --upgrade pip setuptools wheel && pip --no-cache-
 
 ENV PYTHONUNBUFFERED=TRUE
 ENV PYTHONDONTWRITEBYTECODE=TRUE
+ENV GIT_PYTHON_REFRESH=quiet
 ENV PATH="/opt/ml/code:${PATH}"
 
 COPY src/ src/
